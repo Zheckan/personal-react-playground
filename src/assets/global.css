@@ -1,0 +1,76 @@
+/**
+ * Global CSS Variables
+ * 
+ * This file defines CSS variables used throughout the application.
+ * These variables are referenced by the TypeScript theme object in src/styles/theme.ts.
+ * 
+ * USAGE GUIDE:
+ * - For direct CSS: Use these variables directly in your CSS files
+ * - For TypeScript: Import from the theme object in src/styles/theme.ts
+ * 
+ * See src/styles/README.md for more information on our design token system.
+ */
+
+:root {
+  /* Primary Colors */
+  --p200: #000000;
+  --p500: #000000;
+  --p600: #000000;
+  --p700: #000000;
+  --p800: #000000;
+  --p900: #000000;
+
+  /* Neutral Colors */
+  --n200: #ffffff;
+  --n300: #ffffff;
+  --n400: #ffffff;
+  --n500: #ffffff;
+  --n600: #ffffff;
+  --n700: #ffffff;
+  --n800: #ffffff;
+  --n900: #ffffff;
+
+  /* System Colors */
+  --e500: #e02727;
+
+  /* Font Families */
+  --font-family-heading: "Space Mono", monospace;
+  --font-family-body: "Inter", sans-serif;
+
+  /* Title Font Sizes */
+  --font-size-title-h1: 20px;
+  --font-size-title-h2: 16px;
+  --font-size-title-h3: 16px;
+
+  /* Paragraph Font Sizes */
+  --font-size-paragraph-16: 16px;
+  --font-size-paragraph-14: 14px;
+  --font-size-paragraph-12: 12px;
+
+  /* Input and Button Font Sizes */
+  --font-size-input: 16px;
+  --font-size-button-16: 16px;
+  --font-size-button-14: 14px;
+  --font-size-button-12: 12px;
+
+  /* Label Font Sizes */
+  --font-size-label-16: 16px;
+  --font-size-label-12: 12px;
+  --font-size-label-10: 10px;
+  --font-size-label-8: 8px;
+
+  /* Font Weights */
+  --font-weight-regular: 300;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-32: 32px;
+  --line-height-24: 24px;
+  --line-height-20: 20px;
+  --line-height-16: 16px;
+  --line-height-12: 12px;
+
+  /* Spacing */
+  --paragraph-spacing-8: 8px;
+  --paragraph-spacing-0: 0px;
+}
