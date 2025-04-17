@@ -15,6 +15,7 @@ Our design system uses a hybrid approach:
 2. **TypeScript objects** in this directory reference those CSS variables and add additional tokens
 
 This approach gives us the best of both worlds:
+
 - CSS variables for global consistency and theming
 - TypeScript objects for type safety and programmatic usage
 
@@ -40,8 +41,8 @@ This approach gives us the best of both worlds:
 - For programmatic usage in components
 
 ```tsx
-import styled from 'styled-components';
-import { theme } from '../styles/theme';
+import styled from "styled-components";
+import { theme } from "../styles/theme";
 
 const StyledButton = styled.button`
   background-color: ${theme.colors.primary.p500};
@@ -56,13 +57,13 @@ const StyledButton = styled.button`
 - For conditional rendering based on screen size
 
 ```tsx
-import styled from 'styled-components';
-import { device } from '../styles/breakpoints';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import styled from "styled-components";
+import { device } from "../styles/breakpoints";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const ResponsiveContainer = styled.div`
   padding: 1rem;
-  
+
   @media ${device.tablet} {
     padding: 2rem;
   }
@@ -71,11 +72,7 @@ const ResponsiveContainer = styled.div`
 // In a component
 const MyComponent = () => {
   const isDesktop = useMediaQuery(device.desktop);
-  
-  return (
-    <div>
-      {isDesktop ? <DesktopView /> : <MobileView />}
-    </div>
-  );
+
+  return <div>{isDesktop ? <DesktopView /> : <MobileView />}</div>;
 };
-``` 
+```

@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './Button.module.css';
+import React from "react";
+import styles from "./Button.module.css";
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline';
-type ButtonSize = 'small' | 'medium' | 'large';
+type ButtonVariant = "primary" | "secondary" | "outline";
+type ButtonSize = "small" | "medium" | "large";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -10,27 +10,26 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  variant = 'primary',
-  size = 'medium',
+const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = "primary",
+  size = "medium",
   fullWidth = false,
-  className = '',
-  ...props 
+  className = "",
+  ...props
 }) => {
   const buttonClasses = [
     styles.button,
     styles[variant],
     styles[size],
-    fullWidth ? styles.fullWidth : '',
-    className
-  ].filter(Boolean).join(' ');
+    fullWidth ? styles.fullWidth : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <button
-      className={buttonClasses}
-      {...props}
-    >
+    <button className={buttonClasses} {...props}>
       {children}
     </button>
   );

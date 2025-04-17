@@ -3,9 +3,11 @@
 This document outlines the structure of our React application and explains how to use the design system.
 
 ## Project running
+
 DO NOT FORGET TO RUN after cloning the repo: `npm install` for your own sanity.
 
 To run the project, use:
+
 ```bash
 npm run dev
 ```
@@ -59,15 +61,15 @@ Use barrel files (index.ts) for cleaner imports:
 
 ```tsx
 // Good
-import { Button } from '../components';
-import { useMediaQuery } from '../hooks';
-import { theme, device } from '../styles';
+import { Button } from "../components";
+import { useMediaQuery } from "../hooks";
+import { theme, device } from "../styles";
 
 // Avoid
-import Button from '../components/Button/Button';
-import { useMediaQuery } from '../hooks/useMediaQuery';
-import { theme } from '../styles/theme';
-import { device } from '../styles/breakpoints';
+import Button from "../components/Button/Button";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { theme } from "../styles/theme";
+import { device } from "../styles/breakpoints";
 ```
 
 It won't be a mistake to use the standard imports, but if you use a cooler imports, one Zhenya will be happy (:
@@ -81,13 +83,11 @@ We use CSS Modules for component styling:
 
 ```tsx
 // Button.tsx
-import styles from './Button.module.css';
+import styles from "./Button.module.css";
 
-const Button = ({ variant = 'primary' }) => {
+const Button = ({ variant = "primary" }) => {
   return (
-    <button className={`${styles.button} ${styles[variant]}`}>
-      Click me
-    </button>
+    <button className={`${styles.button} ${styles[variant]}`}>Click me</button>
   );
 };
 ```
@@ -112,7 +112,7 @@ import { device } from '../styles';
 
 const Component = () => {
   const isTablet = useMediaQuery(device.tablet);
-  
+
   return (
     <div>
       {isTablet ? <TabletView /> : <MobileView />}
@@ -129,4 +129,4 @@ const Component = () => {
 
 ## Further Reading
 
-See `styles/README.md` for more detailed information about the design token system. 
+See `styles/README.md` for more detailed information about the design token system.
